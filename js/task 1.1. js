@@ -1,0 +1,26 @@
+// function disemvowel1(str) {
+//   const arr = ["a", "e", "i", "o", "u"];
+//   strSplit = str.split("");
+//   let newStr;
+//   for (newStr of strSplit) {
+//     if (newStr.includes(arr)) {
+//       newStr.pop();
+//     }
+//   }
+//   return strSplit;
+// }
+// disemvowel1("This website is for losers LOL!");
+
+// function disemvowel(str) {
+//   const arr = ["a", "e", "i", "o", "u"];
+//   let newStr=[]
+//   strSplit = str.split("");
+//   for (let i = 0; i<strSplit.length; i++) {
+//     if (!arr.includes(strSplit[i])) {
+//       newStr.push(strSplit[i]);
+//     }
+//   }
+//   return newStr.join("");
+// }
+
+// disemvowel("This website is for losers LOL!");
