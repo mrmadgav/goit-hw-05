@@ -8,30 +8,30 @@
 // Метод pad(str) - получает парметр str (строку) и добавляет ее в начало и в конец _value
 
 class StringBuilder {
-  constructor(_value) {
-    this.value = _value;
+  constructor(value) {
+    this._value = value;
   }
-  getValue() {
-    return this.value;
+  value() {
+    return this._value;
   }
   append(str) {
-    this.value += str;
+    this._value += str;
   }
   prepend(str) {
-    this.value = `${str}${this.value}`;
+    this._value = `${str}${this._value}`;
   }
   pad(str) {
-    this.value = `${str}${this.value}${str}`;
+    this._value = `${str}${this._value}${str}`;
   }
 }
 
 const builder = new StringBuilder(".");
 
 builder.append("^");
-console.log(builder.value); // '.^'
+console.log(builder.value()); // '.^'
 
 builder.prepend("^");
-console.log(builder.value); // '^.^'
+console.log(builder.value()); // '^.^'
 
 builder.pad("=");
-console.log(builder.value); // '=^.^='
+console.log(builder.value()); // '=^.^='

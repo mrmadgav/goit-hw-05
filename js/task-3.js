@@ -6,24 +6,24 @@
 // addItem(item) - получает новый товар и добавляет его к текущим
 // removeItem(item) - получет товар и, если он есть, удаляет его из текущих
 class Storage {
-  constructor(name) {
-    this.name = name;
+  constructor(items) {
+    this.items = items;
   }
   getItems() {
-    return this.name;
+    return this.items;
   }
   addItem(item) {
-    this.name.push(item);
-    return this.name;
+    this.items.push(item);
+    return this.items;
   }
   removeItem(item) {
-    if (this.name.includes(item)) {
+    if (this.items.includes(item)) {
       let index;
-      while ((index = this.name.indexOf(item)) > -1) {
-        this.name.splice(index, 1);
+      while ((index = this.items.indexOf(item)) > -1) {
+        this.items.splice(index, 1);
       }
     }
-    return this.name;
+    return this.items;
   }
 }
 

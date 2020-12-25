@@ -5,8 +5,8 @@ class Car {
    * который принимает объект-машину как параметр и выводит
    * в консоль значения свойств maxSpeed, speed, isOn, distance и price.
    */
-  static getSpecs({ ...Car }) {
-    console.log(Car);
+  static getSpecs(car) {
+    console.log({...car});
   }
   /*
    * Конструктор получает объект настроек.
@@ -23,7 +23,7 @@ class Car {
   constructor(prop) {
     this.maxSpeed = prop.maxSpeed;
     this.speed = 0;
-    this.isOn = prop.isOn;
+    this.isOn = false;
     this.distance = 0;
     this.price = prop.price;
   }
@@ -57,7 +57,7 @@ class Car {
    * не больше чем значение свойства maxSpeed
    */
   accelerate(value) {
-    if (this.speed < this.maxSpeed) {
+    if (this.speed + value < this.maxSpeed) {
       this.speed += value;
     }
   }
@@ -67,7 +67,7 @@ class Car {
    * при условии что результирующая скорость не меньше нуля
    */
   decelerate(value) {
-    if (this.speed >= 0) {
+    if (this.speed - value >= 0) {
       this.speed -= value;
     }
   }
